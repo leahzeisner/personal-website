@@ -224,6 +224,10 @@
     box-shadow: 0rem 0rem 1rem 1rem rgba(212, 116, 212, 0.747);
 }
 
+#image1:hover, #image2:hover, #image3:hover, #image4:hover {
+    box-shadow: none;
+}
+
 
 
 
