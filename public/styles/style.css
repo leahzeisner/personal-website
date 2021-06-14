@@ -60,6 +60,7 @@
     width: 350px;
     border-radius: 50%;
     float: right;
+    box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
 
 #welcome-title {
@@ -209,23 +210,24 @@
     flex-direction: column;
     margin: 0 auto;
     padding: none;
-
+    width: 110rem;
 }
 
 .slideshow {
     padding-bottom: 15rem;
-    width: 110rem;
+    width: 100%;
     margin-left: 850px;
     padding-left: 1rem;
     padding-top: 1rem;
 }
 
-.slideshow img:hover {
-    box-shadow: 0rem 0rem 1rem 1rem rgba(212, 116, 212, 0.747);
+.slideshow img {
+    width: 50%; 
+    border: 0.5px solid rgb(145, 142, 142);
 }
 
-#image1:hover, #image2:hover, #image3:hover, #image4:hover {
-    box-shadow: none;
+.slideshow img:hover {
+    box-shadow: 0rem 0rem 1rem 1rem rgba(212, 116, 212, 0.747);
 }
 
 
@@ -292,7 +294,11 @@
 
 
 #gmail-logo:hover, #linkedin-logo:hover {
-    box-shadow: 0px 0px 12px rgb(190, 6, 190);
+    filter: brightness(80%);
+}
+
+#gmail-logo:active, #linkedin-logo:active {
+    transform: translateY(2px);
 }
 
 
@@ -385,6 +391,7 @@
     .slideshow {
         width: 75rem;
         margin-left: 600px;
+        padding-left: 2rem;
     }
 }
 
