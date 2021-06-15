@@ -3,9 +3,11 @@ const welcomePage = document.getElementById('welcome')
 const aboutPage = document.getElementById('about')
 const contactPage = document.getElementById('contact')
 const workPage = document.getElementById('work')
+const starsByID = document.getElementById('stars-container')
 const slideshowEl = document.getElementById('slideshow')
 const slidesElement = document.getElementsByClassName("my-slides")
 const starsContainer = document.querySelector(".stars-container")
+const loader = document.getElementById('loader')
 
 
 let imagesLoaded = 0
@@ -51,7 +53,9 @@ function togglePageDisplay(makeHidden) {
   aboutPage.style.display = makeHidden ? 'none' : 'flex'
   workPage.style.display = makeHidden ? 'none' : 'flex'
   contactPage.style.display = makeHidden ? 'none' : 'flex'
-  starsContainer.style.display = makeHidden ? 'none' : 'block'
+  starsByID.style.display = makeHidden ? 'none' : 'block'
+
+  loader.style.display = makeHidden ? 'flex' : 'none'
 }
 
 
@@ -69,7 +73,6 @@ function checkImagesLoaded() {
 function createImages() {
   // Hide Page while images load
   togglePageDisplay(true)
-  console.log('here')
 
   // Load images
   pictures.forEach((picture) => {
