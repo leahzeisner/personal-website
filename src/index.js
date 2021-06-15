@@ -1,9 +1,104 @@
+// DOM Elements
+const welcomePage = document.getElementById('welcome')
+const aboutPage = document.getElementById('about')
+const contactPage = document.getElementById('contact')
+const workPage = document.getElementById('work')
+const slideshowEl = document.getElementById('slideshow')
+const slidesElement = document.getElementsByClassName("my-slides")
+const starsContainer = document.querySelector(".stars-container")
+
+
+let imagesLoaded = 0
+
+const pictures = [
+  { link: "https://hangmann-gamee.netlify.app", name: "hangman-pic.png" },
+  { link: "https://github.com/leahzeisner/Sudoku", name: "sudoku-pic-1.png" },
+  { link: "https://github.com/leahzeisner/Sudoku", name: "sudoku-pic-2.png" },
+  { link: "https://my-indecision-app.netlify.app/", name: "indecision-pic-1.png" },
+  { link: "https://my-indecision-app.netlify.app/", name: "indecision-pic-2.png"},
+  { link: "https://react-udemycourse2-expensify.herokuapp.com/", name: "expensify-pic-1.png" },
+  { link: "https://react-udemycourse2-expensify.herokuapp.com/", name: "expensify-pic-2.png" },
+  { link: "https://zeisner-weather-app.herokuapp.com/", name: "weather-app-pic.png" },
+  { link: "https://zeisner-chat-app.herokuapp.com/", name: "chat-app-pic-1.png" },
+  { link: "https://zeisner-chat-app.herokuapp.com/", name : "chat-app-pic-2.png" },
+  { link: "https://recipe-shoppinglist-app.web.app/", name : "recipe-sl-app-pic-1.png" },
+  { link: "https://recipe-shoppinglist-app.web.app/", name: "recipe-sl-app-pic-2.png" },
+  { link: "https://github.com/leahzeisner/django-meetups-app", name: "meetups-pic-1.png" },
+  { link: "https://github.com/leahzeisner/django-meetups-app", name: "meetups-pic-2.png" },
+  { link: "http://djangoblog-env.eba-jejnkqaj.us-east-2.elasticbeanstalk.com/", name: "blog-app-pic-1.png" },
+  { link: "http://djangoblog-env.eba-jejnkqaj.us-east-2.elasticbeanstalk.com/", name: "blog-app-pic-2.png" },
+  { link: "http://djangoblog-env.eba-jejnkqaj.us-east-2.elasticbeanstalk.com/", name: "blog-app-pic-3.png" },
+  { link: "https://github.com/leahzeisner/quote-generator", name: "quote-generator-pic.png" },
+  { link: "https://github.com/leahzeisner/infinte-scroll", name: "infinite-scroll-pic.png" },
+  { link: "https://github.com/leahzeisner/joke-teller", name: "joke-teller-pic.png" },
+  { link: "https://github.com/leahzeisner/light-dark-mode", name: "light-dark-pic-light.png" },
+  { link: "https://github.com/leahzeisner/light-dark-mode", name: "light-dark-pic-dark.png" },
+  { link: "https://github.com/leahzeisner/music-player", name: "music-player-pic.png" },
+  { link: "https://github.com/leahzeisner/custom-countdown", name: "countdown-pic-1.png" },
+  { link: "https://github.com/leahzeisner/custom-countdown", name: "countdown-pic-2.png" },
+  { link: "https://github.com/leahzeisner/spock-rock-game", name: "spock-rock-game-pic.png" },
+  { link: "https://github.com/leahzeisner/drag-n-drop", name: "kanban-board-pic.png" },
+  { link: "https://github.com/leahzeisner/calculator-app", name: "calculator-pic.png" },
+  { link: "https://github.com/leahzeisner/microsoft-paint-clone", name: "paint-clone.png" },
+  { link: "https://github.com/leahzeisner/pong-game", name: "pong-game-pic.png" }
+]
+
+
+
+// Hide everything on the page except the loading svg
+function togglePageDisplay(makeHidden) {
+  welcomePage.style.display = makeHidden ? 'none' : 'flex'
+  aboutPage.style.display = makeHidden ? 'none' : 'flex'
+  workPage.style.display = makeHidden ? 'none' : 'flex'
+  contactPage.style.display = makeHidden ? 'none' : 'flex'
+  starsContainer.style.display = makeHidden ? 'none' : 'block'
+}
+
+
+
+// Check if all images have been loaded
+function checkImagesLoaded() {
+  if (imagesLoaded === pictures.length) {
+    togglePageDisplay(false)
+  }
+}
+
+
+
+// Create slideshow pictures
+function createImages() {
+  // Hide Page while images load
+  togglePageDisplay(true)
+  console.log('here')
+
+  // Load images
+  pictures.forEach((picture) => {
+    const link = document.createElement('a')
+    link.href = picture.link
+
+    const image = document.createElement('img')
+    image.classList.add('my-slides')
+    image.src = `./images/${picture.name}`
+
+    link.appendChild(image)
+    slideshowEl.appendChild(link)
+
+    imagesLoaded++
+    checkImagesLoaded()
+  })
+}
+createImages()
+
+
+
+
+
+
+
 // Automatic Slideshow - change image every 3 seconds
 let myIndex = 0;
 
 function slideshow() {
-    const slidesElement = document.getElementsByClassName("my-slides");
-
     let i;
     for (i = 0; i < slidesElement.length; i++) {
         slidesElement[i].style.display = "none";
@@ -18,6 +113,11 @@ function slideshow() {
     setTimeout(slideshow, 3000);
 }
 slideshow();
+
+
+
+
+                        
 
 
 
@@ -46,7 +146,7 @@ window.addEventListener("scroll", () => {
   } else {
     starsOpacity = 1   // change back to 0 if you don't want them to show on welcome page
   }
-  document.querySelector(".stars-container").style.opacity = starsOpacity;
+  starsContainer.style.opacity = starsOpacity;
 
 });
 

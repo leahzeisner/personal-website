@@ -21,7 +21,7 @@
     <body class="body" style="scroll-behavior: smooth;">
         
 
-        <div class="welcome-page">
+        <div class="welcome" id="welcome">
             <div class="welcome-page-left">
                 <img id="profile-picture" src="./images/profile.JPG">  
             </div>
@@ -46,11 +46,9 @@
                 and minoring in Mathematics. I'm a
                 member of the Northeastern University
                 Women in Technology club.</p>
-                <!-- <img id="nu-logo" src="./images/nu-logo.png">  -->
             </div>
 
             <div class="about-collins">
-                <!-- <img id="collins-logo" src="./images/collins-logo.jpeg"> -->
                 <p id="about-collins-summary">I'm currently working at Collins Aerospace 
                     as a Software Engineer as part of Northeastern's 
                     Co-op Program. I review documentation provided 
@@ -82,38 +80,7 @@
                 </div>
                 
                 <div class="work-slideshow">
-                    <section class="slideshow">
-                        <a href="https://hangmann-gamee.netlify.app"><img class="my-slides" src="./images/hangman-pic.png"></a>
-                        <a href="https://github.com/leahzeisner/Sudoku"><img class="my-slides" src="./images/sudoku-pic-1.png"></a>
-                        <a href="https://github.com/leahzeisner/Sudoku"><img class="my-slides" src="./images/sudoku-pic-2.png"></a>
-                        <a href="https://my-indecision-app.netlify.app/"><img class="my-slides" src="./images/indecision-pic-1.png"></a>
-                        <a href="https://my-indecision-app.netlify.app/"><img class="my-slides" src="./images/indecision-pic-2.png"></a>
-                        <a href="https://react-udemycourse2-expensify.herokuapp.com/"><img class="my-slides" src="./images/expensify-pic-1.png"></a>
-                        <a href="https://react-udemycourse2-expensify.herokuapp.com/"><img class="my-slides" src="./images/expensify-pic-2.png"></a>
-                        <a href="https://zeisner-weather-app.herokuapp.com/"><img class="my-slides" src="./images/weather-app-pic.png"></a>
-                        <a href="https://zeisner-chat-app.herokuapp.com/""><img class="my-slides" src="./images/chat-app-pic-1.png"></a>
-                        <a href="https://zeisner-chat-app.herokuapp.com/"><img class="my-slides" src="./images/chat-app-pic-2.png"></a>
-                        <a href="https://recipe-shoppinglist-app.web.app/"><img class="my-slides" src="./images/recipe-sl-app-pic-1.png"></a>
-                        <a href="https://recipe-shoppinglist-app.web.app/"><img class="my-slides" src="./images/recipe-sl-app-pic-2.png"></a>
-                        <a href="https://github.com/leahzeisner/django-meetups-app"><img class="my-slides" src="./images/meetups-pic-1.png"></a>
-                        <a href="https://github.com/leahzeisner/django-meetups-app"><img class="my-slides" src="./images/meetups-pic-2.png"></a>
-                        <a href="http://djangoblog-env.eba-jejnkqaj.us-east-2.elasticbeanstalk.com/"><img class="my-slides" src="./images/blog-app-pic-1.png"></a>
-                        <a href="http://djangoblog-env.eba-jejnkqaj.us-east-2.elasticbeanstalk.com/"><img class="my-slides" src="./images/blog-app-pic-2.png"></a>
-                        <a href="http://djangoblog-env.eba-jejnkqaj.us-east-2.elasticbeanstalk.com/"><img class="my-slides" src="./images/blog-app-pic-3.png"></a>
-                        <a href="https://github.com/leahzeisner/quote-generator"><img class="my-slides" src="./images/quote-generator-pic.png"></a>
-                        <a href="https://github.com/leahzeisner/infinte-scroll"><img class="my-slides" src="./images/infinite-scroll-pic.png"></a>
-                        <a href="https://github.com/leahzeisner/joke-teller"><img class="my-slides" src="./images/joke-teller-pic.png"></a>
-                        <a href="https://github.com/leahzeisner/light-dark-mode"><img class="my-slides" src="./images/light-dark-pic-light.png"></a>
-                        <a href="https://github.com/leahzeisner/light-dark-mode"><img class="my-slides" src="./images/light-dark-pic-dark.png"></a>
-                        <a href="https://github.com/leahzeisner/music-player"><img class="my-slides" src="./images/music-player-pic.png"></a>
-                        <a href="https://github.com/leahzeisner/custom-countdown"><img class="my-slides" src="./images/countdown-pic-1.png"></a>
-                        <a href="https://github.com/leahzeisner/custom-countdown"><img class="my-slides" src="./images/countdown-pic-2.png"></a>
-                        <a href="https://github.com/leahzeisner/spock-rock-game"><img class="my-slides" src="./images/spock-rock-game-pic.png"></a>
-                        <a href="https://github.com/leahzeisner/drag-n-drop"><img class="my-slides" src="./images/kanban-board-pic.png"></a>
-                        <a href="https://github.com/leahzeisner/calculator-app"><img class="my-slides" src="./images/calculator-pic.png"></a>
-                        <a href="https://github.com/leahzeisner/microsoft-paint-clone"><img class="my-slides" src="./images/paint-clone.png"></a>
-                        <a href="https://github.com/leahzeisner/pong-game"><img class="my-slides" src="./images/pong-game-pic.png"></a>
-                    </section>
+                    <section id="slideshow" class="slideshow"></section>
                 </div>
             </div>
             
@@ -138,12 +105,19 @@
                 </div>
             </div>
             
-        </div>     
+        </div>    
+    
 
-        <div class="stars-container">
+        <div class="stars-container" id="stars-container">
             <div class="stars" id="stars"></div>
             <div class="stars" id="stars2"></div>
             <div class="stars" id="stars3"></div>
+        </div>
+
+
+
+        <div class="loader" id="loader">
+            <img src="./images/loader.svg" alt="Loading...">
         </div>
         
    
