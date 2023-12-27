@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../common/Header";
 import About from "./About";
+import Work from "./Work";
 import "./Landing.css";
 
 function Landing() {
@@ -20,21 +21,22 @@ function Landing() {
   }, [index, text, fullText, setIndex, setText]);
 
   return (
-    <div>
-      <div className="flex flex-col landing text-darkblue overflow-hidden h-[100vh]">
-        <Header />
+    <div className="flex flex-col place-items-center bg-yellow">
+      <div className="flex flex-col landing text-darkblue overflow-hidden h-[100vh] w-screen">
+        <Header isLanding={true} />
 
         <div className="flex flex-col justify-center items-center h-[90vh]">
           <div className="flex flex-col place-items-center w-3/5 mb-16">
             <h1 className="text-5xl font-bold tracking-[.3em] mb-10">{name}</h1>
-            <p className="text-lg mb-6">{text}</p>
+            <p className="text-lg font-medium mb-6">{text}</p>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col h-[100vh] bg-yellow">
+      <div className="flex flex-col place-items-center w-screen">
         <Header />
         <About />
+        <Work />
       </div>
     </div>
   );
