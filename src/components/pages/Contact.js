@@ -1,20 +1,19 @@
 import Header from "../common/Header";
 
-function Contact() {
+function Contact({ isLanding = false }) {
   return (
-    <div className="bg-yellow">
-      <Header />
+    <div className="flex flex-col place-items-center w-screen bg-yellow h-[100vh]">
+      {!isLanding ? <Header /> : undefined}
 
-      <hr class="h-px bg-pink border-0"></hr>
-
-      <div className="bg-yellow text-darkblue h-[90vh]">
-        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 class="mb-8 lg:mb-16 text-4xl tracking-tight font-extrabold text-center">
+      <div className="w-2/3 mb-32 bg-yellow text-darkblue font-medium mt-16">
+        <div class="pt-6 lg:pt-10 px-4 mx-auto max-w-screen-md">
+          <header className="text-4xl mb-6 tracking-[.05em] text-center font-medium">
             Contact Me
-          </h2>
+          </header>
+          <hr class="h-px mb-10 bg-pink border-0"></hr>
           <form action="#" class="space-y-8">
             <div>
-              <label for="email" class="block mb-2 text-sm font-medium">
+              <label for="email" class="block mb-2 text-md">
                 Your email
               </label>
               <input
@@ -26,7 +25,7 @@ function Contact() {
               ></input>
             </div>
             <div>
-              <label for="subject" class="block mb-2 text-sm font-medium">
+              <label for="subject" class="block mb-2 text-md">
                 Subject
               </label>
               <input
@@ -38,7 +37,7 @@ function Contact() {
               ></input>
             </div>
             <div class="sm:col-span-2">
-              <label for="message" class="block mb-2 text-sm font-medium">
+              <label for="message" class="block mb-2 text-md">
                 Your message
               </label>
               <textarea
@@ -50,7 +49,7 @@ function Contact() {
             </div>
             <button
               type="submit"
-              class="shadow-sm bg-darkblue text-yellow text-sm rounded-lg py-3 px-5 font-medium text-center focus:border-darkblue hover:bg-pink"
+              class="shadow-md bg-yellow text-darkblue border border-pink text-sm rounded-lg py-3 px-5 text-center focus:border-darkblue hover:bg-pink hover:text-yellow"
             >
               Send message
             </button>

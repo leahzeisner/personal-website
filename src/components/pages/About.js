@@ -1,15 +1,15 @@
-import profile from "../../../utils/profile.jpg";
+import profile from "../../utils/profile.jpg";
 import {
   WHOOP_URL,
   WM_URL,
   COLLINS_URL,
   C4C_URL,
   TADPOLE_URL,
-} from "../../../utils/constants";
+} from "../../utils/constants";
 
 function About() {
   return (
-    <div className="flex mt-16 mb-32 text-darkblue font-medium w-2/3">
+    <div className="flex mt-32 text-darkblue font-medium w-2/3">
       <img
         src={profile}
         alt="Leah Zeisner"
@@ -17,7 +17,7 @@ function About() {
       ></img>
 
       <div>
-        <header className="text-6xl">Hi, I'm Leah</header>
+        <header className="text-6xl tracking-[.05em]">Hi, I'm Leah</header>
 
         <hr class="h-px my-8 bg-pink border-0"></hr>
         <p className="mb-4">

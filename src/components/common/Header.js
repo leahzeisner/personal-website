@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { slide as Menu } from "react-burger-menu";
 import { EMAIL_URL, GITHUB_URL, LINKED_IN_URL } from "../../utils/constants";
 import linkedin_blue from "../../utils/linkedin-blue.png";
 import linkedin_pink from "../../utils/linkedin-pink.png";
@@ -11,6 +11,7 @@ import email_pink from "../../utils/email-pink.png";
 import email_yellow from "../../utils/email-yellow.png";
 import { useState } from "react";
 import { useEffect } from "react";
+import "./Header.css";
 
 function Header({ isLanding = false }) {
   const [linkedInImg, setLinkedInImg] = useState(linkedin_blue);
@@ -26,26 +27,27 @@ function Header({ isLanding = false }) {
   }, [isLanding]);
 
   return (
-    <div className="flex w-screen justify-between">
-      <div className="flex justify-start items-center h-[10vh] w-1/3 bg-transparent ml-4">
-        <ul className="flex flex-row justify-around w-full font-bold uppercase text-darkblue">
-          <li className="hover:text-pink">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="hover:text-pink">
-            <Link to="/work">Work Experience</Link>
-          </li>
-          <li className="hover:text-pink">
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li className="hover:text-pink">
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </div>
+    <div>
+      <Menu>
+        <a id="home" className="menu-item" href="/">
+          Home
+        </a>
+        <a id="work" className="menu-item" href="/work">
+          Work Experience
+        </a>
+        <a id="portfolio" className="menu-item" href="/portfolio">
+          Portfolio
+        </a>
+        <a id="blog" className="menu-item" href="/blog">
+          Blog
+        </a>
+        <a id="contact" className="menu-item" href="/contact">
+          Contact
+        </a>
+      </Menu>
 
-      <div className="flex justify-end items-center h-[10vh] w-1/4 bg-transparent mr-4">
-        <ul className="flex flex-row justify-around w-2/5 font-bold uppercase text-darkblue">
+      <div className="flex place-self-end items-center h-[10vh] w-1/6 fixed top-0 right-0">
+        <ul className="flex flex-row justify-between font-bold uppercase text-darkblue w-full px-8">
           <li>
             <a href={LINKED_IN_URL}>
               <img
