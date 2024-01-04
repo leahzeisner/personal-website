@@ -7,6 +7,7 @@ import blog from "../../utils/projects/blog1.png";
 import chat from "../../utils/projects/chat1.png";
 import recipe from "../../utils/projects/recipe1.png";
 import weather from "../../utils/projects/weather.png";
+import c4c from "../../utils/projects/c4c-message-board-2.png";
 
 function SlideShow() {
   return (
@@ -36,6 +37,11 @@ function SlideShow() {
           className="h-full w-full object-cover"
         />
         <img src={sudoku} alt="Sudoku" className="h-full w-full object-cover" />
+        <img
+          src={c4c}
+          alt="C4C Message Board"
+          className="h-full w-full object-cover"
+        />
         <img src={blog} alt="Blog" className="h-full w-full object-cover" />
         <img src={chat} alt="Chat" className="h-full w-full object-cover" />
         <img src={recipe} alt="Recipe" className="h-full w-full object-cover" />

@@ -2,7 +2,10 @@ import Header from "../common/Header";
 
 function Contact({ isLanding = false }) {
   return (
-    <div className="flex flex-col place-items-center w-screen bg-yellow h-[100vh]">
+    <div
+      id="contact"
+      className="flex flex-col place-items-center w-screen bg-yellow h-[100vh]"
+    >
       {!isLanding ? <Header /> : undefined}
 
       <div className="w-2/3 mb-32 bg-yellow text-darkblue font-medium mt-16">

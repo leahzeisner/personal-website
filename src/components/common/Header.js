@@ -19,6 +19,7 @@ function Header({ isLanding = false }) {
   const [emailImg, setEmailImg] = useState(email_blue);
 
   useEffect(() => {
+    console.log(isLanding);
     if (isLanding) {
       setLinkedInImg(linkedin_yellow);
       setGithubImg(github_yellow);
@@ -46,7 +47,7 @@ function Header({ isLanding = false }) {
         </a>
       </Menu>
 
-      <div className="flex place-self-end items-center h-[10vh] w-1/6 fixed top-0 right-0">
+      <div className="flex place-self-end items-center h-[10vh] w-48 fixed top-0 right-0">
         <ul className="flex flex-row justify-between font-bold uppercase text-darkblue w-full px-8">
           <li>
             <a href={LINKED_IN_URL}>

@@ -24,7 +24,7 @@ function Landing() {
 
   return (
     <div className="flex flex-col bg-yellow w-screen text-darkblue place-items-center">
-      <Header />
+      <Header isLanding={true} />
 
       <div className="flex flex-col landing w-full h-[100vh]">
         <div className="flex flex-col justify-center items-center h-[100vh]">

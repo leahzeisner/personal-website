@@ -25,7 +25,7 @@ function Work({ isLanding = false }) {
               </time>
               <h3 className="text-lg font-bold">Code4Community: J-PAL</h3>
               <h2 className="text-md font-medium italic">Co-Tech Lead</h2>
-              <ul className="my-2 text-base list-disc ml-8 font-medium">
+              <ul className="my-2 text-base list-disc ml-8 font-medium hidden">
                 <li>
                   Contributed to a full-stack application that generates letters
                   of recommendation by leveraging performance surveys completed
@@ -71,7 +71,7 @@ function Work({ isLanding = false }) {
               <h2 className="text-md font-medium italic">
                 Front-End Developer
               </h2>
-              <ul className="my-2 text-base list-disc ml-8 font-medium">
+              <ul className="my-2 text-base list-disc ml-8 font-medium hidden">
                 <li>
                   Developed front-end code for a web application that connects
                   students with tutors and manages their meetings.
@@ -94,7 +94,7 @@ function Work({ isLanding = false }) {
               </time>
               <h3 className="text-lg font-bold">Wood Mackenzie</h3>
               <h2 className="text-md font-medium italic">Software Developer</h2>
-              <ul className="my-2 text-base list-disc ml-8 font-medium">
+              <ul className="my-2 text-base list-disc ml-8 font-medium hidden">
                 <li>
                   Engineered dynamic and interactive visualizations using React
                   Typescript, encompassing charts, graphs, and maps, to adeptly
@@ -127,7 +127,7 @@ function Work({ isLanding = false }) {
               <h2 className="text-md font-medium italic">
                 Full-Stack Software Engineer
               </h2>
-              <ul className="my-2 text-base list-disc ml-8 font-medium">
+              <ul className="my-2 text-base list-disc ml-8 font-medium hidden">
                 <li>
                   Utilized React JS to update the front-end checkout flow for
                   WHOOP products in order to engage hundreds-of-thousands of
@@ -156,7 +156,7 @@ function Work({ isLanding = false }) {
               </time>
               <h3 className="text-lg font-bold">Collins Aerospace</h3>
               <h2 className="text-md font-medium italic">Software Engineer</h2>
-              <ul className="my-2 text-base list-disc ml-8 font-medium">
+              <ul className="my-2 text-base list-disc ml-8 font-medium hidden">
                 <li>
                   Performed QA testing to ensure code was bug-free and met the
                   requirements of the client.

@@ -48,9 +48,9 @@ function About() {
             Tadpole Tutoring
           </a>
           , a platform connecting students with tutors and managing their
-          meetings. In my free time, I've developed mock landing pages, a live
-          chat room, a blog, and games such as Sudoku and Hangman, along with
-          practical tools like recipe and to-do apps.
+          meetings. In my free time, I've developed mock landing pages, live
+          chat rooms/message boards, blogs, games such as Sudoku and Hangman,
+          along with practical tools like recipe and to-do apps.
         </p>
         <p className="mb-4">
           I am passionate about full-stack web development that has a positive
